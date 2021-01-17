@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="ec.edu.epn.atencionmedicaremota.Validacion_DatosTest" time="0.003" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="ec.edu.epn.atencionmedicaremota.Validacion_DatosTest" time="0.007" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2020.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -65,11 +65,11 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="ec.edu.epn.atencionmedicaremota.Validacion_DatosTest" name="given_cedula_when_validation_is_correct_then_ok" time="0"/>
-  <testcase classname="ec.edu.epn.atencionmedicaremota.Validacion_DatosTest" name="given_correo_when_validation_is_correct_then_ok" time="0"/>
+  <testcase classname="ec.edu.epn.atencionmedicaremota.Validacion_DatosTest" name="given_correo_when_validation_is_correct_then_ok" time="0.001"/>
   <testcase classname="ec.edu.epn.atencionmedicaremota.Validacion_DatosTest" name="given_direccion_domiciliaria_when_validation_is_correct_then_ok" time="0"/>
   <testcase classname="ec.edu.epn.atencionmedicaremota.Validacion_DatosTest" name="given_cedula_when_validate_then_timeout" time="0.002"/>
   <testcase classname="ec.edu.epn.atencionmedicaremota.Validacion_DatosTest" name="given_correo_when_validation_is_incorrect_then_error" time="0"/>
-  <testcase classname="ec.edu.epn.atencionmedicaremota.Validacion_DatosTest" name="given_nombre_paciente_when_validation_is_correct_then_ok" time="0"/>
-  <testcase classname="ec.edu.epn.atencionmedicaremota.Validacion_DatosTest" name="given_cedula_and_password_when_identical_expected_values_then_ok" time="0.001"/>
+  <testcase classname="ec.edu.epn.atencionmedicaremota.Validacion_DatosTest" name="given_nombre_paciente_when_validation_is_correct_then_ok" time="0.002"/>
+  <testcase classname="ec.edu.epn.atencionmedicaremota.Validacion_DatosTest" name="given_cedula_and_password_when_identical_expected_values_then_ok" time="0.002"/>
   <testcase classname="ec.edu.epn.atencionmedicaremota.Validacion_DatosTest" name="given_cedula_when_validation_is_incorrect_then_error" time="0"/>
 </testsuite>
