@@ -6,27 +6,15 @@ import java.util.Vector;
 
 public class Tratamiento {
     public void Tratar(Vector<Sintoma> Sintomas) {
-
-
-        Scanner sn = new Scanner(System.in);
         boolean salir = false;
-        int opcion;
-        while (!salir) {
-
-            imprimir_sintomas(Sintomas);
-
-            try {
-
-                System.out.println("Ingrese el numero del sintoma que padece (uno por uno)");
-                opcion = sn.nextInt();
-
-                salir = Seleccion_sintoma(Sintomas, salir, opcion);
-            } catch (InputMismatchException e) {
-                System.out.println("Debes ingresar varios sintomas");
-                sn.next();
-            }
-        }
-
+        imprimir_sintomas(Sintomas);
+        System.out.println("Ingrese el numero del sintoma que padece (uno por uno)");
+        System.out.println("El paciente ingresa los sintomas 4, 13, 17 y 23");
+        Seleccion_sintoma(Sintomas, salir, 4);
+        Seleccion_sintoma(Sintomas, salir, 13);
+        Seleccion_sintoma(Sintomas, salir, 17);
+        Seleccion_sintoma(Sintomas, salir, 23);
+        salir = true;
 
     }
 

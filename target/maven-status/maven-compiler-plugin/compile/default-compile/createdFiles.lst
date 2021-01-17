@@ -1,0 +1,11 @@
+ec\edu\epn\atencionmedicaremota\MedicinaRemotaExecute.class
+ec\edu\epn\atencionmedicaremota\Validacion_Datos.class
+ec\edu\epn\atencionmedicaremota\Tratamiento.class
+ec\edu\epn\atencionmedicaremota\LoginResponse.class
+ec\edu\epn\atencionmedicaremota\LoginValidation.class
+ec\edu\epn\atencionmedicaremota\Login_Sistema_IESS.class
+ec\edu\epn\atencionmedicaremota\LoginResponse$LoginStatus.class
+ec\edu\epn\atencionmedicaremota\Sintoma.class
+ec\edu\epn\atencionmedicaremota\LoginRequest.class
+ec\edu\epn\atencionmedicaremota\Enfermedad.class
+ec\edu\epn\atencionmedicaremota\Paciente.class

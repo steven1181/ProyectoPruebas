@@ -55,54 +55,35 @@ public class MedicinaRemotaExecute {
 
     }
     public static void menu_principal(Vector<Paciente> Pacientes,Vector<Sintoma> Sintomas,Vector<Enfermedad> Enfermedades) {
-        Scanner sn = new Scanner(System.in);
-        boolean salir = false;
-        int opcion;
-        while (!salir) {
-            try {
-                System.out.println("===============================================================");
-                System.out.println("==================== ATENCION MEDICA REMOTA ===================");
-                System.out.println("===============================================================");
-                System.out.println("1. Ingresar");
-                System.out.println("2. Salir");
-                System.out.println("Ingrese el numero de la opcion que desea realizar: ");
-                opcion = sn.nextInt();
-                switch (opcion) {
-                    case 1:
-                        Scanner entrada1 = new Scanner(System.in);
-                        System.out.println("Ingrese su cedula: ");
-                        String cedula = entrada1.nextLine();
-                        System.out.println("Ingrese su contrasenia: ");
-                        String contrasenia = entrada1.nextLine();
-                        int indice_paciente = validacion_paciente(Pacientes, cedula, contrasenia);
-                        if( indice_paciente!= (-1)){
-                            System.out.println(Pacientes.elementAt(indice_paciente).imprimir_detalles_paciente());
-                            //Imprimo sintomas y selecciono los sintomas
-                            Tratamiento tratamiento = new Tratamiento();
-                            tratamiento.Tratar(Sintomas);
-                            //Diagnosticar enfermedad
-                            int indicador_enfermedad = tratamiento.diagnosticar_enfermedad(Sintomas);
-                            System.out.println("===============================================================");
-                            impresion_enfermedad(Enfermedades,indicador_enfermedad);
-                            System.out.println("===============================================================");
-                        }else
-                            System.out.println("Usuario no valido");
-                        salir = true;
-                        break;
-                    case 2:
-                        salir = true;
-                        break;
-                    default:
-                        System.out.println("Seleccion no valida");
-                }
-            } catch (InputMismatchException e) {
-                System.out.println("Debes ingresar una opcion valida");
-                sn.next();
-            }
+
+        System.out.println("===============================================================");
+        System.out.println("==================== ATENCION MEDICA REMOTA ===================");
+        System.out.println("===============================================================");
+        System.out.println("1. Ingresar");
+        System.out.println("2. Salir");
+        System.out.println("Ingrese el numero de la opcion que desea realizar: ");
+        System.out.println("Aqui el paciente selecciona la opcion 1. Ingresar\n");
+        System.out.println("Ingrese su cedula: ");
+        System.out.println("El paciente ingresa la cedula 1726746595");
+        String cedula = "1726746595";
+        System.out.println("Ingrese su contrasenia: ");
+        System.out.println("El paciente ingresa la contraseña: steven123");
+        String contrasenia = "steven123";
+        System.out.println("El sistema valida la informacion y muestra la pagina de inicio y los sintomas");
+        int indice_paciente = validacion_paciente(Pacientes, cedula, contrasenia);
+        if (indice_paciente != (-1)) {
+            System.out.println(Pacientes.elementAt(indice_paciente).imprimir_detalles_paciente());
+            //Imprimo sintomas y selecciono los sintomas
+            Tratamiento tratamiento = new Tratamiento();
+            tratamiento.Tratar(Sintomas);
+            //Diagnosticar enfermedad
+            int indicador_enfermedad = tratamiento.diagnosticar_enfermedad(Sintomas);
+            System.out.println("===============================================================");
+            impresion_enfermedad(Enfermedades, indicador_enfermedad);
+            System.out.println("===============================================================");
         }
-
-
     }
+
 
     public static int validacion_paciente(Vector<Paciente> Pacientes ,String cedula, String contrasenia) {
         for (int i = 0; i < Pacientes.size(); i++) {
